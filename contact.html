@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Contact</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <div class="header">
+            <header>Contact Us</header>
+        </div>
+
+        <!-- NAVBAR -->
+        <nav>
+            <ol>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="austin.html">AUSTIN</a></li>
+                <li><a href="dallas.html">DALLAS</a></li>
+                <li><a href="houston.html">HOUSTON</a></li>
+            </ol>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+         <div class="container2">
+            <div class="form-container">
+                <h2>Send Us A Message <span class="star-icon">&#9733;</span></h2>
+                    <section class="sec-form">
+                        <form id="contact-form">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" id="first-name" name="first-name" required>
+    
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="last-Name" name="last-name" required>
+    
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+    
+                            <label for="confirm-email">Confirm Email:</label>
+                            <input type="email" id="confirm-email" name="email" required>
+    
+                            <label for="question">Enter Your Question:</label>
+                            <textarea id="question" name="question" rows="5" required></textarea>
+    
+                            <button type="submit">Submit</button>
+                        </form>
+                    </section>
+            </div>
+
+            <aside class="form-aside">
+                <img src="assets/bigtex.jpg" alt="Big Tex">
+                <p>The Texas Legend Big Tex</p>
+            </aside>
+            
+        </div>
+
+        <script>
+            document.getElementById("contact-form").addEventListener("submit", function(event) {
+                let email = document.getElementById("email").value;
+                let confirmEmail = document.getElementById("confirm-email").value;
+        
+                if (email !== confirmEmail) {
+                    window.alert("Email does not match!");
+                    event.preventDefault();
+                }
+            });
+        </script>
+    </body>
+</html>
